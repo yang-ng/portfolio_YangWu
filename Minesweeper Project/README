@@ -1,0 +1,34 @@
+Project: Minesweeper
+
+Introduction
+    Description:
+    This project is a command-line implementation of the classic Minesweeper game. The game generates a grid filled with hidden cells, some containing bombs. The player is tasked with uncovering cells that do not contain bombs, while trying to avoid selecting a bomb. The game ends when either all non-bomb cells are uncovered (win) or a bomb is selected (lose).
+
+    Files:
+    Minesweeper.java: Main game logic that handles user input, game state, and progress.
+    Board.java: Handles generating the Minesweeper board and displaying it.
+    CheckInput.java: Provides input validation functions to ensure user inputs valid integers.
+
+
+Usage:
+    How to Compile:
+    javac Minesweeper.java Board.java CheckInput.java
+
+    How to Run:
+    java Minesweeper <rows> <columns> <bomb_probability>
+
+    Parameters:
+    rows: The number of rows for the game board (e.g., 10).
+    columns: The number of columns for the game board (e.g., 10).
+    bomb_probability: A decimal number between 0 and 1 representing the probability of a bomb appearing in each cell (e.g., 0.2 for a 20% chance).
+
+    Example Run:
+    java Minesweeper 10 10 0.15
+
+    How to Play:
+    Enter a row and column number when prompted to select a cell.
+    The game will reveal the number of bombs adjacent to the selected cell.
+    Avoid selecting a bomb! If you select a bomb, you lose.
+    Continue selecting cells until either all non-bomb cells are revealed (you win!) or you hit a bomb (you lose).
+
+Good Luck!
