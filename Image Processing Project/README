@@ -1,1 +1,16 @@
+Project: Image Processing
 
+Introduction
+   Files:
+      Pixel.java
+      Color.java
+      Boundary.java
+      QuadTree.java
+      Main.java
+
+Usage:
+   How to Run: 
+      edge detection: java Main -i filename.ppm -e
+      apply filter: java Main -i filename.ppm -x
+      compresson: java Main -i filename.ppm -c
+      (5 ppm files are in the directory for tesing)
