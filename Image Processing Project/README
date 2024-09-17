@@ -1,12 +1,14 @@
 Project: Image Processing
 
 Introduction
+   Description: This program implements image processing using a QuadTree data structure and is capable of handling images of all dimensions. It performs operations such as edge detection, image compression, and applying filters to images in the .ppm format. The program recursively divides images into quadrants, processing each section based on color values, and outputs the results in various formats, depending on the chosen operation.
+
    Files:
-      Pixel.java
-      Color.java
-      Boundary.java
-      QuadTree.java
-      Main.java
+      Pixel.java: Defines the Pixel class representing a pixel with coordinates and color.
+      Color.java: Defines the Color class that manages the RGB values of a pixel.
+      Boundary.java: Implements the Boundary class, representing nodes in the QuadTree for image partitioning.
+      QuadTree.java: Manages the recursive splitting and compression of images using a QuadTree structure.
+      Main.java: The driver program that processes images based on command-line inputs.
 
 Usage:
    How to Run: 
@@ -14,3 +16,9 @@ Usage:
       apply filter: java Main -i filename.ppm -x
       compresson: java Main -i filename.ppm -c
       (5 ppm files are in the directory for tesing)
+      after running the program, the generated output will be a .ppm file in the directory
+
+   Example Runs:
+      java Main -i tokyo_night.ppm -e
+      java Main -i fuji.ppm -x
+      java Main -i brick.ppm -c

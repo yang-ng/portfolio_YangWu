@@ -1,4 +1,4 @@
-/* Name: Yiling Hou & Yang Wu
+/* Name: Yang Wu
 * File: Main.java
 * Desc:
 *
