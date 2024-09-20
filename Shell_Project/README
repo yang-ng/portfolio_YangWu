@@ -1,0 +1,49 @@
+Project: Shell
+
+Introduction
+    Description: This program is a custom shell that supports basic built-in commands such as `pwd`, `mkdir`, `rmdir`, `rm`, `cat`, `ls`, `jobs`, `kill`, `fg`, and `bg`, as well as job control for managing background and foreground processes. It also supports external commands by forking child processes and using `execvp` to execute them. The shell includes signal handling for stopping, continuing, and terminating processes, with a linked list used to manage jobs and deferred jobs.
+
+    Files:
+    shell.c: the implementation of the custom shell, including built-in commands, job control, signal handling, and the execution of external commands
+    Makefile: provides the build instructions to compile the shell
+
+
+Usage:    
+    How to Compile:
+    type "make"
+
+    How to Run:
+    type "./shell"
+
+    Commands that this shell supports:
+
+    redirection:
+    > implemented for built-in commands: ls, cat, will be tested in next section
+    > and >> implemented for execvp commands:
+    spaces are needed on both sides of the redirection symbols!
+        sample runs:      
+            ps > ps.txt
+            echo "write" > f1.txt
+            echo "append" >> f1.txt
+            yes > yes.txt
+            
+    kill related:
+                kill
+                kill #
+                kill -9 #
+
+    fg related: able to bring both running/suspended job to foreground
+                fg
+                fg #
+                fg %#
+                sample run: sleep 15&, fg
+                            sleep 15, ctrl+Z, fg
+
+    bg related: 
+                bg
+                bg #
+                bg %#
+                sample run: sleep 15, ctrl+Z, bg
+
+    ; related:
+                ;;
